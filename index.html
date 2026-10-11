@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reiseradar – billige flyreiser fra Norge</title>
+<meta name="description" content="Reiseradar finner de billigste flyene fra Norge: prisvarsler, kalender med billigste dag og direkte lenker til flyselskapene. Under utvikling.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f5f0;
+    --card: #ffffff;
+    --line: #e3dfd6;
+    --text: #1c1b19;
+    --muted: #6b675f;
+    --faint: #8a857b;
+    --green: oklch(0.5 0.14 150);
+    --green-bg: oklch(0.93 0.06 150);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 400 17px/1.55 'IBM Plex Sans', system-ui, sans-serif;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+  header { display: flex; justify-content: space-between; align-items: center; padding: 22px 0; }
+  .logo { font-weight: 700; font-size: 20px; letter-spacing: -.02em; }
+  .tag {
+    font: 500 11px 'IBM Plex Mono', monospace; color: var(--muted);
+    border: 1px solid var(--line); border-radius: 99px; padding: 5px 11px;
+  }
+  .tag::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: oklch(0.75 0.14 80); margin-right: 7px; vertical-align: 1px; }
+  h1 { font-size: clamp(34px, 7vw, 54px); line-height: 1.08; letter-spacing: -.03em; margin: 48px 0 16px; text-wrap: balance; }
+  .lead { font-size: 19px; color: var(--muted); max-width: 34em; margin: 0 0 40px; text-wrap: pretty; }
+  .demo {
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; margin-bottom: 56px;
+  }
+  .demo .k { font: 500 10px 'IBM Plex Mono', monospace; color: var(--faint); letter-spacing: .04em; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 12px 0; border-top: 1px solid #efebe3; }
+  .row:first-of-type { border-top: 0; }
+  .row b { font-weight: 600; }
+  .row small { display: block; font: 400 12px 'IBM Plex Mono', monospace; color: var(--faint); }
+  .price { font-weight: 600; color: var(--green); white-space: nowrap; }
+  .note { font-size: 12px; color: var(--faint); margin-top: 8px; }
+  h2 { font-size: 22px; letter-spacing: -.02em; margin: 0 0 18px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 56px; }
+  .f { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+  .f h3 { margin: 0 0 6px; font-size: 16px; }
+  .f p { margin: 0; color: var(--muted); font-size: 15px; }
+  .honest { border-left: 3px solid var(--green); background: var(--green-bg); border-radius: 0 12px 12px 0; padding: 16px 18px; margin-bottom: 56px; }
+  .honest p { margin: 0; font-size: 15px; }
+  footer { border-top: 1px solid var(--line); padding: 22px 0 40px; font-size: 13px; color: var(--faint); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="logo">reiseradar</span>
+    <span class="tag">UNDER UTVIKLING</span>
+  </header>
+
+  <h1>Hvor billig kan du komme deg vekk?</h1>
+  <p class="lead">Reiseradar finner de billigste flyene fra Norge. Se billigste dag i en kalender, få varsel når prisen faller, og gå rett videre til flyselskapet eller den billigste tilbyderen.</p>
+
+  <div class="demo" aria-label="Eksempel på hvordan Reiseradar viser priser">
+    <div class="k">EKSEMPEL · FRA OSLO · TUR/RETUR</div>
+    <div class="row"><div><b>Barcelona</b><small>5 netter i november</small></div><span class="price">fra 1 673 kr</span></div>
+    <div class="row"><div><b>London</b><small>1 uke i november</small></div><span class="price">fra 394 kr</span></div>
+    <div class="row"><div><b>Reykjavík</b><small>9 netter i mars</small></div><span class="price">fra 1 124 kr</span></div>
+    <div class="note">Eksempelpriser fra oktober 2026. Prisene endrer seg hele tiden.</div>
+  </div>
+
+  <h2>Slik hjelper Reiseradar deg</h2>
+  <div class="grid">
+    <div class="f"><h3>Billigste dag</h3><p>En kalender viser prisen for hver dag, så du ser med én gang når det er billigst å reise.</p></div>
+    <div class="f"><h3>Prisvarsler</h3><p>Sett en målpris for en rute og en måned. Vi sjekker prisen flere ganger om dagen.</p></div>
+    <div class="f"><h3>Hvor som helst</h3><p>Usikker på hvor du vil? Se de billigste reisemålene fra din flyplass.</p></div>
+  </div>
+
+  <div class="honest">
+    <p><b>Ærlig om penger:</b> Reiseradar kan få provisjon når du bestiller via lenkene våre. Det påvirker aldri rekkefølgen – billigst står alltid først, og norske flyselskaps egne tilbud vises tydelig.</p>
+  </div>
+
+  <footer>© 2026 Reiseradar · Laget i Norge · Priser i norske kroner</footer>
+</div>
+</body>
+</html>
